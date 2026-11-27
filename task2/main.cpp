@@ -1,21 +1,26 @@
 #include <iostream>
+
 #include <fstream>
-#include <string>
 using namespace std;
 
-int main() {
-    string n1, n2, n3;
+int main()
+{
+    string a, b, o;
 
-    cin>>n1>>n2>>n3;
-    ofstream fruit("fruit.txt");
-    fruit<<n1<<endl;
-fruit<<n2<<endl;
-    fruit<<n3<<endl;
-    fruit.close();
-    ofstream t("fruit.txt", ios::app);
-    t<<"Fresh Fruits";
+    ifstream k("fruit.txt");
 
-    t.close();
+    k >> a;
+    k>> b;
+    k>> o;
+
+    k.close();
+
+    ofstream kk("fruit.txt", ios::app);
+
+    kk << "\nFresh Fruits";
+
+    kk.close();
 
     return 0;
 }
+
